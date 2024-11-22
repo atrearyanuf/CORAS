@@ -1,0 +1,154 @@
+.logout {
+    text-align: right; /* Ensure alignment within its container */
+    margin-left: auto; /* Push to the far right */
+    margin-right: 0; /* No margin on the right */
+}
+
+.container_nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Spread out items */
+    width: 100%;
+}
+
+
+.form-text {
+    width: 100%;
+}
+
+
+.mt-4 {
+    margin-top: 1.5rem !important;
+    padding-top: 50px;
+}
+
+.me-2 {
+    font-size: medium;
+    color: darkgrey;
+    padding-left: 20px;
+}
+
+/* Main Content */
+.content {
+    flex: 1;
+    padding: 5px;
+    text-align: center;
+}
+
+.content h2 {
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+textarea {
+    width: 80%;
+    max-width: 600px;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.response {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.Home {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures it takes the full viewport height */
+}
+
+/* Content area that will grow and push footer down */
+.content {
+    flex: 1;
+}
+
+/* Footer styling */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.justify-content-center {
+    justify-content: center !important;
+    padding-top: 100px;
+}
+
+.navfont {
+    font-size: 25px !important;
+}
+
+/* src/App.css */
+.login {
+    width: 300px;
+    margin-top: 200px;
+    margin-left: 800px;
+    padding: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login h2 {
+    text-align: center;
+}
+
+.login form div {
+    margin-bottom: 1rem;
+}
+
+.login form label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.login form input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.login form button {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.login form button:hover {
+    background-color: #0056b3;
+}
