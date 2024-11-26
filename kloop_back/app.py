@@ -10,10 +10,42 @@ import tiktoken
 import whisper
 import tempfile
 from dotenv import load_dotenv
+from prometheus_client import Counter, Summary, generate_latest, CONTENT_TYPE_LATEST
+from flask import Response
+import time
+
+
+
+## Adding ad configuring Promotheus
+
+REQUEST_COUNT = Counter('http_requests_total', 'Total HTTP Requests', ['method', 'endpoint'])
+REQUEST_LATENCY = Summary('http_request_latency_seconds', 'Request latency in seconds')
+
+
+
+
+
 
 load_dotenv()
 
 app = Flask(__name__)
+
+
+
+@app.before_request
+def before_request():
+    request.start_time = time.time()
+    REQUEST_COUNT.labels(method=request.method, endpoint=request.path).inc()
+
+@app.after_request
+def after_request(response):
+    """Calculate the request latency and observe it."""
+    if hasattr(request, 'start_time'):  # Ensure start_time was set
+        latency = time.time() - request.start_time
+        REQUEST_LATENCY.observe(latency)
+    return response
+
+
 
 CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
 
@@ -194,6 +226,13 @@ def process_audio(file_path, chunk_size):
         for i in range(0, len(words), chunk_size)
     ]
     return text_chunks
+
+
+
+@app.route('/metrics', methods=['GET'])
+def metrics():
+    return Response(generate_latest(), mimetype=CONTENT_TYPE_LATEST)
+
 
 
 if __name__ == "__main__":

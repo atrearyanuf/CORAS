@@ -7,4 +7,5 @@ tiktoken==0.8.0
 Flask==3.0.3
 Flask-cors==5.0.0
 python-dotenv==1.0.1
-openai-whisper==20240930    
+openai-whisper
+prometheus_client==0.21.0
