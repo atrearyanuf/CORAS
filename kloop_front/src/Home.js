@@ -16,9 +16,25 @@ function Home({ onLogout }) {
     const [response, setResponse] = useState('');
     const [file, setFile] = useState(null);
     const [isUploading, setIsUploading] = useState(false); 
+    const [feedback, setFeedback] = React.useState(null);
     const fileInputRef = useRef(null); // Ref to reset file input
 
+    const handleFeedback = async (type) => {
+        setFeedback(type); // Update feedback state
+        try {
+            // Send feedback to the backend
+            const res = await axios.post('http://localhost:5000/feedback', {
+                feedback: type, 
+                query,          
+                response,      
+            });
 
+            alert(`Feedback "${type}" submitted successfully!`);
+        } catch (err) {
+            console.error(err);
+            alert('Error submitting feedback.');
+        }
+    };
 
     // Handle file selection
     const handleFileChange = (e) => {
@@ -135,6 +151,23 @@ function Home({ onLogout }) {
                             <div className="response mt-4 p-3 border rounded bg-light">
                                 <h3>Response:</h3>
                                 <p>{response}</p>
+                                {/* Feedback Buttons */}
+        <div className="feedback mt-3">
+            <h5>Was this response helpful?</h5>
+            <Button
+                variant="success"
+                className="me-2"
+                onClick={() => handleFeedback('up')}
+            >
+                👍 Yes
+            </Button>
+            <Button
+                variant="danger"
+                onClick={() => handleFeedback('down')}
+            >
+                👎 No
+            </Button>
+        </div>
                             </div>
                         )}
                     </Col>

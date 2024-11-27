@@ -20,7 +20,7 @@ import time
 
 REQUEST_COUNT = Counter('http_requests_total', 'Total HTTP Requests', ['method', 'endpoint'])
 REQUEST_LATENCY = Summary('http_request_latency_seconds', 'Request latency in seconds')
-
+FEEDBACK_COUNTER = Counter('feedback_total', 'Count of feedback received', ['type', 'query', 'response'])
 
 
 
@@ -226,6 +226,24 @@ def process_audio(file_path, chunk_size):
         for i in range(0, len(words), chunk_size)
     ]
     return text_chunks
+
+
+@app.route('/feedback', methods=['POST'])
+def feedback():
+    data = request.json
+    print(data)
+    feedback_type = data.get('feedback')
+    query = data.get('query', 'unknown_query')
+    response = data.get('response', 'unknown_response') 
+
+    if feedback_type not in ['up', 'down']:
+        return jsonify({'error': 'Invalid feedback type'}), 400
+
+    # Increment the feedback counter with query and response as labels
+    FEEDBACK_COUNTER.labels(type=feedback_type, query=query, response=response).inc()
+
+    print(f"Received feedback: {feedback_type}, Query: {query}, Response: {response}")
+    return jsonify({'message': 'Feedback received successfully'}), 200
 
 
 
