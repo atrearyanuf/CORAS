@@ -118,9 +118,9 @@ function Home({ onLogout }) {
             {/* Main Content */}
             <Container className="content mt-4">
             <div className="product mb-4 p-3">
-    <h3>Welcome to CORAS</h3>
+    <h3>Welcome to CORAS!</h3>
     <p>
-    CORAS is an intelligent tool that helps you quickly find important information from large, messy documents like PDFs and Excel files. It uses advanced technology to understand your 
+    CORAS is an intelligent tool that helps you quickly find important information from large, messy unstructured data like PDFs, audio and video files. It uses advanced technology to understand your 
     questions and give you clear, real-time answers, saving you time and improving productivity—perfect for making better decisions faster.
     </p>
 </div>

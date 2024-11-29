@@ -2,13 +2,13 @@ services:
   backend:
     build:
       context: ./kloop_back
-      dockerfile: dockerfile
+      dockerfile: Dockerfile
     ports:
       - "5000:5000"
   frontend:
     build:
       context: ./kloop_front
-      dockerfile: dockerfile
+      dockerfile: Dockerfile
     ports:
       - "3000:3000"
 
