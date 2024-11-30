@@ -212,6 +212,39 @@ Metrics in Prometheus format.
 - **docker-compose**: Multi-Container management of all services collectively at one place.
 - **prometheus.yml**: promotheus configuration file.
 
+
+
+### Deployment Strategy
+
+This project is deployed using **Docker** for both frontend and backend.
+
+#### Backend:
+- **Build**: `docker build -t kloop-backend -f Dockerfile .`
+- **Run**: `docker run -p 5000:5000 kloop-backend`
+
+#### Frontend:
+- **Build**: `docker build -t kloop-frontend -f Dockerfile .`
+- **Run**: `docker run -p 3000:3000 kloop-frontend`
+
+#### Docker Compose (for both):
+- **Build and run**: `docker-compose up --build`
+
+---
+
+### Monitoring and Metrics
+
+**Prometheus** is used for monitoring, and **Grafana** for visualization.
+
+#### Setup:
+1. **Prometheus**: Scrapes metrics from the backend at `localhost:5000/metrics`.
+2. **Grafana**: Add Prometheus as a data source (URL: `http://localhost:9090`).
+
+#### Metrics:
+- **http_requests_total**: Total HTTP requests.
+- **http_request_latency_seconds**: Request latency.
+- **feedback_total**: Number of feedback responses.
+
+
 ## Contributing
 
 We welcome contributions! Feel free to fork the repository and submit pull requests. 
