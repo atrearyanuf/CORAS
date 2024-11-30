@@ -248,7 +248,7 @@ This project is deployed using **Docker** for both frontend and backend.
 ### Link to Key Documentation Files:
 
 - **AI System Project Proposal**: [documentation/AI System project proposal template](https://drive.google.com/file/d/1b-KAXi6jlfmdWdog2MOvVvzCuLVfNs9w/view?usp=sharing)
-- **Project Report (optional)**: [documentation/Project report](#)
+- **Project Report**: [documentation/Project report](#)
 
 
 ## Contributing
