@@ -1,0 +1,24 @@
+
+"Hi everyone! Today, we’re excited to share our project, CORAS — a Context-Based Intelligent Knowledge Retrieval System built with RAG (Retrieval Augmented Generation) architecture.
+
+Imagine having a personal assistant that can instantly analyze any document, audio, or video you need — and keep everything confidential. Sounds great, right?
+
+We all know how hard it is to sort through large amounts of unstructured data like PDFs, research papers, audio books, or videos. That’s where CORAS helps. We use AI to find the most relevant information from all types of documents — text, tables, images, or audio.
+
+The problem with current tools is that most data today is private, not public. Using platforms like ChatGPT for sensitive tasks is risky. For example, if you want to understand a technical whitepaper, ChatGPT might give an answer that’s wrong. This happens because it doesn’t have access to accurate or up-to-date data. The same applies to businesses, where private data can’t be processed by public platforms like OpenAI without proper safeguards.
+
+CORAS solves this. When you enter a query, CORAS searches through your documents, pulls the best results, and uses them as context to generate accurate responses with LLM APIs. We use Pinecone for vector databases and OpenAI’s API for the RAG model. The backend is built on Flask, and the frontend is in React for a smooth, secure user experience. We've also added login features for personalized access and secure uploads.
+
+We’ve containerized the app with Docker to ensure it’s easy to deploy and scale. For system health, we use Prometheus and Grafana for monitoring.
+
+CORAS works with all types of unstructured data, in real time. Whether it’s audio, video, images, PDFs, or Excel files — just upload your data and get insights instantly.
+
+In short, CORAS saves time, boosts productivity, and can be a game-changer for professionals who deal with large volumes of data. It helps users make better, faster decisions.
+
+---
+
+**Building CORAS:**
+
+Bringing this project to life has been an amazing experience. From the initial idea to building the entire system, we faced challenges, especially in choosing the right tech stack. Deciding on the right vector database, embeddings, and tools for the frontend and backend took multiple rounds of testing and adjustments. But in the end, everything came together.
+
+We truly believe CORAS solves a problem that impacts all of us. It can make us more efficient and productive in our daily work."
