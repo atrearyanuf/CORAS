@@ -3,7 +3,9 @@
 
 ## CORAS — Context-Based Intelligent Knowledge Retrieval System
 
-![image](https://github.com/user-attachments/assets/caceae83-5405-485a-9682-87d64ff02188)
+## Working Demo
+https://github.com/user-attachments/assets/af84d12b-a26c-4abc-8194-78d22a105682
+
 
 ## Overview
 
