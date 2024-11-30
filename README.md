@@ -194,6 +194,23 @@ Metrics in Prometheus format.
 
 ![image](https://github.com/user-attachments/assets/767779fb-83e5-4d22-9adf-16f9b7f14138)
 
+- **kloop_back**: Folder for all backend code and configurations.
+  - **app.py**: Main Flask application script with API routes, integrations, and logic.
+  - **.env**: Environment file to store sensitive keys like API keys (e.g., OpenAI, Pinecone).
+  - **.gitignore**: Specifies files and directories to be ignored by Git version control.
+  - **Dockerfile**: Docker configuration to containerize the backend application.
+  - **requirements.txt**: Lists Python dependencies needed for the backend application.
+
+- **kloop_front**: Folder for all frontend code and configurations.
+  - **node_modules**: Directory where Node.js stores all installed dependencies.
+  - **src**: Source folder containing React components, hooks, and logic.
+  - **App.js**: Main React component that sets up routing and global layout.
+  - **Home.js**: React component for the home page of the frontend application.
+  - **Login.js**: React component for user authentication and login.
+  - **Dockerfile**: Docker configuration to containerize the frontend application.
+  - **package.json**: Lists the Node.js dependencies and scripts for the frontend application.
+- **docker-compose**: Multi-Container management of all services collectively at one place.
+- **prometheus.yml**: promotheus configuration file.
 
 ## Contributing
 
