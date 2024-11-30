@@ -237,4 +237,4 @@ To contribute:
 ---
 
 
-#### This repository is handled by Aryan and Anany
+#### This repository is handled by Anany and Aryan 
