@@ -245,6 +245,12 @@ This project is deployed using **Docker** for both frontend and backend.
 - **feedback_total**: Number of feedback responses.
 
 
+### Link to Key Documentation Files:
+
+- **AI System Project Proposal**: [documentation/AI System project proposal template](https://drive.google.com/file/d/1b-KAXi6jlfmdWdog2MOvVvzCuLVfNs9w/view?usp=sharing)
+- **Project Report (optional)**: [documentation/Project report](#)
+
+
 ## Contributing
 
 We welcome contributions! Feel free to fork the repository and submit pull requests. 
