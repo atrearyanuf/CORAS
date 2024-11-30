@@ -1,7 +1,7 @@
 
-### Artificial Intelligence Systems Project Repository
+# Artificial Intelligence Systems Project Repository
 
-# CORAS — Context-Based Intelligent Knowledge Retrieval System
+## CORAS — Context-Based Intelligent Knowledge Retrieval System
 
 ![image](https://github.com/user-attachments/assets/caceae83-5405-485a-9682-87d64ff02188)
 
