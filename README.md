@@ -1,4 +1,4 @@
-## CORAS - Context Based Intelligent Knowledge Retrieval System using RAG Architecture 
+
 ### Artificial Intelligence Systems Project Repository
 
 # CORAS — Context-Based Intelligent Knowledge Retrieval System
