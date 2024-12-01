@@ -3,7 +3,9 @@
 
 ## CORAS — Context-Based Intelligent Knowledge Retrieval System
 
-![image](https://github.com/user-attachments/assets/caceae83-5405-485a-9682-87d64ff02188)
+## Working Demo
+https://github.com/user-attachments/assets/af84d12b-a26c-4abc-8194-78d22a105682
+
 
 ## Overview
 
@@ -192,6 +194,62 @@ Metrics in Prometheus format.
 
 ![image](https://github.com/user-attachments/assets/767779fb-83e5-4d22-9adf-16f9b7f14138)
 
+- **kloop_back**: Folder for all backend code and configurations.
+  - **app.py**: Main Flask application script with API routes, integrations, and logic.
+  - **.env**: Environment file to store sensitive keys like API keys (e.g., OpenAI, Pinecone).
+  - **.gitignore**: Specifies files and directories to be ignored by Git version control.
+  - **Dockerfile**: Docker configuration to containerize the backend application.
+  - **requirements.txt**: Lists Python dependencies needed for the backend application.
+
+- **kloop_front**: Folder for all frontend code and configurations.
+  - **node_modules**: Directory where Node.js stores all installed dependencies.
+  - **src**: Source folder containing React components, hooks, and logic.
+  - **App.js**: Main React component that sets up routing and global layout.
+  - **Home.js**: React component for the home page of the frontend application.
+  - **Login.js**: React component for user authentication and login.
+  - **Dockerfile**: Docker configuration to containerize the frontend application.
+  - **package.json**: Lists the Node.js dependencies and scripts for the frontend application.
+- **docker-compose**: Multi-Container management of all services collectively at one place.
+- **prometheus.yml**: promotheus configuration file.
+
+
+
+### Deployment Strategy
+
+This project is deployed using **Docker** for both frontend and backend.
+
+#### Backend:
+- **Build**: `docker build -t kloop-backend -f Dockerfile .`
+- **Run**: `docker run -p 5000:5000 kloop-backend`
+
+#### Frontend:
+- **Build**: `docker build -t kloop-frontend -f Dockerfile .`
+- **Run**: `docker run -p 3000:3000 kloop-frontend`
+
+#### Docker Compose (for both):
+- **Build and run**: `docker-compose up --build`
+
+---
+
+### Monitoring and Metrics
+
+**Prometheus** is used for monitoring, and **Grafana** for visualization.
+
+#### Setup:
+1. **Prometheus**: Scrapes metrics from the backend at `localhost:5000/metrics`.
+2. **Grafana**: Add Prometheus as a data source (URL: `http://localhost:9090`).
+
+#### Metrics:
+- **http_requests_total**: Total HTTP requests.
+- **http_request_latency_seconds**: Request latency.
+- **feedback_total**: Number of feedback responses.
+
+
+### Link to Key Documentation Files:
+
+- **AI System Project Proposal**: [documentation/AI System project proposal template](https://drive.google.com/file/d/1b-KAXi6jlfmdWdog2MOvVvzCuLVfNs9w/view?usp=sharing)
+- **Project Report**: [documentation/Project report](#)
+
 
 ## Contributing
 
@@ -218,4 +276,4 @@ To contribute:
 ---
 
 
-#### This repository is handled by Aryan and Anany
+#### This repository is handled by Anany and Aryan 
